@@ -2,7 +2,7 @@
 
 **_Os trechos em itálico servem apenas como guia para o preenchimento da seção. Por esse motivo, não devem fazer parte da documentação final._**
 
-## Extenção para o app Inteli (Sistema de reserva de salas para agendamentos.)
+## Sistema de Reserva de Salas - Plataforma Web (AdaLove).
 
 #### **Autor:** Arthur Marques de Almeida
 
@@ -17,13 +17,24 @@
 <br>
 
 ## <a name="c1"></a>1. Introdução 
-O sistema que será desenvolvido é uma nova função dentro do aplicativo Inteli, já usado pelos alunos para gerar o QR Code de entrada na faculdade e fazer o check-in. A ideia é dar ainda mais autonomia para os alunos, criando uma ferramenta para que eles possam reservar as salas de estudo do campus de forma prática e rápida.
+# Descrição Reformulada do Projeto
 
-Hoje, o processo de reserva é pouco conhecido e pouco acessível: é preciso ir pessoalmente até a recepção para agendar uma sala, sem ter como consultar antes quais estão disponíveis. Com essa nova função, o aluno poderá ver pelo app quais salas estão livres, escolher o melhor horário e fazer a reserva sem sair do lugar.
+O projeto consiste no desenvolvimento de um **sistema de reserva de salas** acessível via **plataforma web**, integrado ao site institucional **AdaLove**, da faculdade **Inteli**. A proposta busca ampliar a autonomia e facilitar o dia a dia dos alunos e professores, oferecendo um meio simples, digital e acessível para agendar as diversas mini salas de estudo e reuniões disponíveis no campus.
 
-Além disso, será possível acompanhar todas as reservas feitas, cancelar se precisar e receber alertas sobre as próximas reservas. Isso vai facilitar muito o dia a dia dos alunos, que poderão planejar melhor seus estudos e usar os espaços disponíveis da faculdade de forma mais organizada.
+Atualmente, o processo de reserva ocorre exclusivamente de forma presencial, na recepção da faculdade, o que gera baixa visibilidade da disponibilidade das salas e acaba dificultando a organização dos alunos e professores que precisam desses espaços. Muitos sequer sabem que é necessário fazer reserva.
 
-O objetivo principal é trazer mais praticidade, melhorar a comunicação sobre a disponibilidade das salas e tornar o uso do campus mais eficiente para todos. Dessa forma, o Inteli se torna ainda mais útil para o dia a dia acadêmico.
+O novo sistema terá como base uma **interface web intuitiva**, com login institucional, onde o usuário poderá:
+
+- Visualizar a lista de salas e horários disponíveis em tempo real;
+- Realizar reservas de forma rápida e prática;
+- Consultar, editar ou cancelar suas próprias reservas;
+- Receber notificações e lembretes (via painel do usuário);
+- (Para administradores) Acompanhar e gerenciar o uso dos espaços.
+
+Ao estar disponível diretamente no site **AdaLove**, o sistema se torna mais acessível para toda a comunidade acadêmica, sem a necessidade de baixar ou atualizar um app. Além disso, facilita a manutenção técnica e a integração com outros sistemas já existentes da faculdade.
+
+Essa mudança fortalece o propósito do **Inteli** de promover soluções digitais acessíveis, otimizando a gestão dos espaços físicos do campus e tornando o ambiente acadêmico mais organizado, eficiente e centrado no usuário.
+
 
 ---
 
@@ -31,7 +42,7 @@ O objetivo principal é trazer mais praticidade, melhorar a comunicação sobre 
 
 <div align="center">
   <sub>Persona</sub><br>
-  <img src="assets/Persona-WAD.png" width="80%">
+  <img src="assets/usuario.png" width="80%">
 </div>
 
 ### 2.2. User Stories 
@@ -40,7 +51,7 @@ O objetivo principal é trazer mais praticidade, melhorar a comunicação sobre 
 Como aluno, quero visualizar a lista de salas disponíveis para reserva, para escolher uma sala livre que atenda às minhas necessidades.
 
 **(US02)**  
-Como professor, quero realizar a reserva de uma sala diretamente pelo aplicativo, para garantir um espaço adequado para ministrar aulas extras, reuniões ou atividades acadêmicas.
+Como professor, quero realizar a reserva de uma sala diretamente pelo site da Adalove, para garantir um espaço adequado para ministrar aulas extras, reuniões ou atividades acadêmicas.
 
 **(US03)**  
 Como aluna, quero receber notificações de confirmação e lembrete das minhas reservas, para não esquecer dos horários e gerenciar melhor meu tempo.
@@ -50,7 +61,7 @@ Como administrador da faculdade, quero gerenciar (aprovar, cancelar ou alterar) 
 
 ## Analise INVEST do US02 (professor)
 **(US02)**  
-Como professor, quero realizar a reserva de uma sala diretamente pelo aplicativo, para garantir um espaço adequado para ministrar aulas extras, reuniões ou atividades acadêmicas.
+Como professor, quero realizar a reserva de uma sala diretamente pelo site da Adalove, para garantir um espaço adequado para ministrar aulas extras, reuniões ou atividades acadêmicas.
 
 **I (Independente):**
 Pode ser implementada separadamente das outras funcionalidades, como visualização de salas ou envio de notificações.
@@ -68,7 +79,7 @@ A funcionalidade é bem definida (escolher sala, data, horário, quem estará pr
 É pequena o bastante para ser desenvolvida e entregue em uma sprint de duração padrão, principalmente se focar inicialmente em um fluxo simples de reserva.
 
 **T (Testável):**
-Pode ser testada facilmente, verificando se o professor consegue selecionar uma sala e completar uma reserva pelo aplicativo.
+Pode ser testada facilmente, verificando se o professor consegue selecionar uma sala e completar uma reserva pelo site da Adalove.
 
 ---
 
